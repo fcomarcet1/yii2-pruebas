@@ -40,6 +40,7 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Calculadora', 'url' => ['/home/calculator']],
             ['label' => 'Test-form', 'url' => ['/site/entry']],
+            ['label' => 'CRUD Books', 'url' => ['/book/index']],
             ['label' => 'Sobre Nosotros', 'url' => ['/site/about']],
             ['label' => 'Contacto', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (

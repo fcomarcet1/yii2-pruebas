@@ -65,6 +65,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    // test method for show data from form
     public function actionEntry(): string
     {
         $model = new EntryForm;
