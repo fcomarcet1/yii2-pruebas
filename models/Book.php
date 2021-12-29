@@ -14,6 +14,8 @@ use Yii;
  */
 class Book extends \yii\db\ActiveRecord
 {
+    public $imageFile;
+
     /**
      * {@inheritdoc}
      */
@@ -30,7 +32,9 @@ class Book extends \yii\db\ActiveRecord
         return [
             [['name'], 'required'],
             [['name'], 'string', 'max' => 50],
-            [['description', 'image'], 'string', 'max' => 255],
+            [['description'], 'string', 'max' => 255],
+            // create input for upload files
+            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -43,7 +47,7 @@ class Book extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'description' => 'Description',
-            'image' => 'Image',
+            'imageFile' => 'Image',
         ];
     }
 }
